@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta charset="UTF-8">
+		<title>BEM</title>
+
+		<style>
+			html {
+			font-family:helvetica, arial, sans-serif;
+			}
+
+			h1 {
+			background-color: #ccc;
+			padding: 5px 0;
+			}
+
+			h2, h3 {
+			background-color: #ccc;
+			}
+
+			.italic {
+			font-style: italic;
+			}
+
+			h2, h3, h4 {
+			display:inline;
+			}
+
+			#both-markup-img {
+			display:block;
+			border:1px solid black;
+			width:70%;
+			height:100%; 
+			}
+
+			pre {
+				background-color: #aeaeae; 
+			}
+		</style> 
+	</head>
+
+	<body translate="no" >
+
+		<h1>
+		BEM - CSS Naming Methodology: An Introduction</h1>
+		<h4> BEM is a naming methodology that creates a set of rules that tries to make CSS more ordered, structured, scaleable, readable and maintainable.
+		<br>
+		BEM encompasses three key elements:
+		</h4>
+		<br><br><br>
+		<h2>// Block </h2><h4> -- Standalone entities that are meaningful on their own: eg: - <span class="italic">header, container, menu, checkbox, input</span></h4>
+		<br>
+		<h2>// Element </h2><h4> -- A part of a block that has no standalone meaning and is semantically tied to its block: eg: - <span class="italic">menu item, list item, checkbox caption, header title</span></h4>
+		<br>
+		<h2>// Modifier </h2><h4> -- A flag on a block or element. Use them to change appearance or behavior: eg: - <span class="italic">disabled, highlighted, checked, fixed, size big, color yellow</span></h4>
+		<br><br><br>
+		<h2>Structure </h2>
+		<br>
+		<br>
+		<img id="both-markup-img" src='BEM-markup-structure.png' alt="img" />
+		<br>
+
+
+		<h2>Looking at BEM in context </h2>
+		<p>This screenshot of the github website homepage shows some common elements of a webpage, and describes what category they would come under in the BEM naming methodology 
+		<br>
+		</p>
+		<img id="both-markup-img" src='github-homepage-screenshot.png' alt="img" />
+		<br>
+		
+		<h2>Looking a Modifiers </h2>
+		<p>Below is an example of the BEM methodology applied to modifying an element.
+		<br>
+		In the screenshot below, it shows us the same button in three different states:
+		<ul>
+		<li>The first state is a you would see it normally.</li>
+		<li>The second state is as it would appear once clicked and for whatever reason it was clicked for was successful.</li>
+		<li>The third state is as it would appear once click and for whatever reason it was clicked for was unsuccessful.</li>
+		</ul>
+		<br>
+		<img id="both-markup-img" src='buttons-modifiers.png' alt="img" />
+		<br>
+
+		<h2>Example in Practice </h2>
+		<p>Below is an example of the BEM methodology in practice.
+		<br>
+		Here we have an unordered list housing list items, where the <span class="italic">unordered list</span> is the <span class="italic">Block</span>, and the <span class="italic">list items</span> are the <span class="italic">Elements</span>. The class applied once the list item has been clicked/hovered, is the <span class="italic">Modifier</span>
+		<br>
+		The block is named something semantic, while the element is named the block class name plus a semantic name for the element. The modifier extends this naming further and is named the block class name plus a semantic name for the element plus a semantic name for the modified aspect.
+		<br>
+		Convention says that the block class name and the element name are sperated by a double underscore, while the element name and the modifier name are seperated by a double hyphen.
+		</p>
+		<img id="both-markup-img" src='bem-in-context.png' alt="img" />
+		<br>
+
+		<br>
+
+		<h2>Notes on BEM </h2>
+		<ul>
+			<li>This naming provides a very flat CSS structure</li>
+			<li>It removes the need to have nested naming eg: - <span class="italic">ul li {padding: 0;}</span> <span style="font-weight:bold;}">OR</span> <span class="italic">nav.footer ul li span {margin-right:10px;}</span></li>  
+			<li>Everything that is a <span class="italic">block</span> or an <span class="italic">element</span> can have it's own class applied</li>
+			<li>The naming is semantic</li>
+			<li>One possible con is that elemnts on a page end up having long class names, however, I think that the order applied by this means that it lacks the confusion that arbitrary named elements</li>
+			<li>The processing time of applying class names is quicker than using 
+		</ul>
+		<br>
+		<br>
+		<h2>Further Resources </h2>
+		<ul>
+			<li>https://www.youtube.com/watch?v=ss9JMVv8rmI -- really good explanation of using BEM with SASS</li>
+			<li>http://getbem.com/introduction/</li>
+			<li>https://www.youtube.com/watch?v=lpxXHkZSl1Q</li>
+			<li>https://css-tricks.com/bem-101/</li>
+			<li>http://atomicdesign.bradfrost.com/chapter-2/</li>
+			<li>https://codepen.io/jeryj/pen/YWwoqd</li>
+		</ul>
+		<br>
+		<h1>
+		Thank you!</h1>
+		<br>
+		<br>	
+	</body>
+</html>
